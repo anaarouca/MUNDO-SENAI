@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caça-Palavras | Mundo SENAI</title>
+
+    <link rel="stylesheet" href="jogo.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <!-- Espaço reservado para o logo -->
+            <img src="mundo senai1.png" alt="Logo Mundo SENAI">
+        </div>
+
+        <div class="identificacao">
+            <span>MUNDO SENAI</span>
+            <h1>Caça-Palavras</h1>
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="container">
+
+        <section class="introducao">
+
+            <h2>Desafie seus conhecimentos!</h2>
+
+            <p>
+                Encontre as palavras relacionadas aos cursos
+                técnicos de Logística, Eletroeletrônica,
+                Eletromecânica, Mecânica e Desenvolvimento de Sistemas.
+            </p>
+
+        </section>
+
+        <!-- CONFIGURAÇÃO DO JOGO -->
+
+        <section class="configuracao">
+
+            <label for="nivel">Escolha a dificuldade:</label>
+
+            <select id="nivel">
+                <option value="facil">Fácil</option>
+                <option value="medio">Médio</option>
+                <option value="dificil">Difícil</option>
+            </select>
+
+            <button id="novoJogo">Novo jogo</button>
+
+        </section>
+
+        <!-- CONTADORES -->
+
+        <section class="informacoes">
+
+            <div class="contador">
+
+                <span>Palavras encontradas</span>
+
+                <strong id="progresso">0 / 5</strong>
+
+            </div>
+
+            <div class="contador">
+
+                <span>Palavras restantes</span>
+
+                <strong id="restantes">5</strong>
+
+            </div>
+
+        </section>
+
+        <!-- ÁREA DO CAÇA-PALAVRAS -->
+
+        <section class="jogo">
+
+            <div class="area-grade">
+
+                <div id="grade" class="grade"></div>
+
+            </div>
+
+            <!-- LISTA E INSTRUÇÕES -->
+
+            <aside class="lista">
+
+                <h3>Encontre as palavras!</h3>
+
+                <div class="instrucao">
+
+                    <strong>COMO JOGAR?</strong>
+
+                    <p>
+                        Para encontrar uma palavra, clique na
+                        primeira letra e depois na última letra
+                        correspondente.
+                    </p>
+
+                    <p>
+                        As palavras podem estar na horizontal,
+                        vertical ou diagonal, inclusive ao contrário!
+                    </p>
+
+                </div>
+
+                <ul id="listaPalavras"></ul>
+
+            </aside>
+
+        </section>
+
+        <!-- MENSAGEM DE CONCLUSÃO -->
+
+        <div id="mensagem" class="mensagem"></div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © Mundo SENAI | Aprender também pode ser um desafio!
+        </p>
+
+    </footer>
+
+    <script src="jogo.js"></script>
+
+</body>
+
+</html>

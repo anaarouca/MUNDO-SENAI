@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFF6EB;
+    color: #282828;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #FFFFFF;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 3px solid #C83232;
+}
+
+.logo {
+    width: 130px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.identificacao span {
+    color: #C83232;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.identificacao h1 {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+/* CONTEÚDO */
+
+.container {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.introducao {
+    margin-bottom: 25px;
+}
+
+.introducao h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    color: #555555;
+    font-size: 14px;
+}
+
+/* CONFIGURAÇÕES */
+
+.configuracao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.configuracao label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+select {
+    padding: 11px 15px;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    font-family: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+#novoJogo {
+    background-color: #C83232;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#novoJogo:hover {
+    background-color: #A82424;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contador {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 7px;
+    padding: 15px 20px;
+    flex: 1;
+}
+
+.contador span {
+    display: block;
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 7px;
+}
+
+.contador strong {
+    font-size: 22px;
+    color: #213E91;
+}
+
+/* ÁREA DO JOGO */
+
+.jogo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.area-grade {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.grade {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+}
+
+.letra {
+    aspect-ratio: 1 / 1;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #282828;
+    font-size: clamp(9px, 2vw, 16px);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.15s;
+    padding: 0;
+}
+
+.letra:hover {
+    background-color: #FFF0E8;
+    border-color: #C83232;
+}
+
+.letra.selecionada {
+    background-color: #213E91;
+    color: #FFFFFF;
+    border-color: #213E91;
+}
+
+.letra.encontrada {
+    background-color: #C83232;
+    color: #FFFFFF;
+    border-color: #C83232;
+}
+
+/* LISTA DE PALAVRAS */
+
+.lista {
+    background-color: #FFFFFF;
+    padding: 22px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+}
+
+.lista h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.instrucao {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+#listaPalavras {
+    list-style: none;
+}
+
+#listaPalavras li {
+    padding: 11px;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#listaPalavras li.encontrada {
+    color: #C83232;
+    text-decoration: line-through;
+}
+
+/* MENSAGEM */
+
+.mensagem {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 700;
+    color: #213E91;
+    font-size: 17px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #282828;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 750px) {
+
+    .jogo {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho {
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    .identificacao h1 {
+        font-size: 21px;
+    }
+
+    .informacoes {
+        flex-direction: column;
+    }
+
+    .area-grade {
+        padding: 10px;
+    }
+
+}
+
+
+/* DESTAQUES DO CABEÇALHO */
+
+.cabecalho {
+    border-bottom: 5px solid #C83232;
+}
+
+.identificacao h1 {
+    color: #213E91;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.introducao h2 {
+    color: #213E91;
+    border-left: 6px solid #C83232;
+    padding-left: 12px;
+}
+
+/* BOTÃO PRINCIPAL */
+
+#novoJogo {
+    background-color: #C83232;
+    box-shadow: 0 3px 0 #982323;
+    font-weight: 800;
+}
+
+#novoJogo:hover {
+    background-color: #213E91;
+    box-shadow: 0 3px 0 #172C68;
+}
+
+/* CARTÕES DE INFORMAÇÃO */
+
+.contador:first-child {
+    background-color: #213E91;
+    border-color: #213E91;
+}
+
+.contador:first-child span,
+.contador:first-child strong {
+    color: #FFFFFF;
+}
+
+.contador:last-child {
+    background-color: #C83232;
+    border-color: #C83232;
+}
+
+.contador:last-child span,
+.contador:last-child strong {
+    color: #FFFFFF;
+}
+
+/* SELEÇÃO DAS LETRAS */
+
+.letra.selecionada {
+    background-color: #213E91;
+    color: #FFFFFF;
+    border: 2px solid #172C68;
+}
+
+/* PALAVRAS ENCONTRADAS */
+
+.letra.encontrada {
+    background-color: #C83232;
+    color: #FFFFFF;
+    border: 2px solid #982323;
+}
+
+/* LISTA DE PALAVRAS */
+
+.lista h3 {
+    color: #213E91;
+    border-bottom: 3px solid #C83232;
+    padding-bottom: 12px;
+}
+
+#listaPalavras li.encontrada {
+    color: #C83232;
+    font-weight: 800;
+}
+
+/* MENSAGEM DE VITÓRIA */
+
+.mensagem {
+    background-color: #213E91;
+    color: #FFFFFF;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+
+
+
+/* CONFETES DA FASE CONCLUÍDA */
+
+.confete {
+    position: fixed;
+    top: -25px;
+    z-index: 99999;
+    width: 12px;
+    height: 18px;
+    pointer-events: none;
+    animation: quedaConfete linear forwards;
+}
+
+@keyframes quedaConfete {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
